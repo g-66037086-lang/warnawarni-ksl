@@ -111,7 +111,14 @@ const texts = {
         yellow: { 
             title: "Kisah Pari-Pari Magika", 
             content: "Cerita tentang Peri Warna...",
-            video: '<source src="video/Kisah-Pari-Pari-Magika.mp4" type="video/mp4">'
+            video: `
+            <iframe 
+                src="https://drive.google.com/file/d/1-bvbeU93H1Z6OjW7HbDU9Z7IA4G4m3dQ/preview"
+                width="50%"
+                height="400"
+                allow="autoplay">
+            </iframe>
+            `
         },
         
         green: { 
@@ -193,7 +200,14 @@ const texts = {
         yellow: { 
             title: "Magic Fairy Tales", 
             content: "Story of the colour fairy.",
-            video: '<source src="video/Magical-Fairy-Tale.mp4" type="video/mp4">'
+            video: `
+            <iframe 
+                src="https://drive.google.com/file/d/1kJEaazOkH5M7iouhcoi-degle9C15H7h/preview"
+                width="50%"
+                height="400"
+                allow="autoplay">
+            </iframe>
+            `
         },
         
         green: { 
@@ -405,7 +419,7 @@ function updateTexts() {
         yellow.querySelector('p');
 
         const yellowVideo =
-        yellow.querySelector('video');
+        yellow.querySelector('.video-container');
 
         if (yellowTitle) {
 
@@ -425,8 +439,6 @@ function updateTexts() {
 
             yellowVideo.innerHTML =
             texts[currentLang].yellow.video;
-
-            yellowVideo.load();
 
         }
 
