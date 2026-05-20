@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rainbow World</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+
+</head>
+
+
+
+<body>
+
+    <header>
+
+        <h1 id="logo">
+            <i class="fa-solid fa-palette"></i>
+            Rainbow Colour Adventures
+        </h1>
+
+        <div class="language">
+            <i class="fas fa-globe"></i>
+            <button class="lang-btn" data-lang="english">EN</button>
+            <button class="lang-btn" data-lang="malay">BM</button>
+        </div>
+
+    </header>
+
+
+    <!-- START SCREEN -->
+    <div id="start-screen">
+
+        <p id="intro-text"></p>
+
+        <button id="start-btn" class="start-btn">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <span id="start-text">Start Adventure</span>
+        </button>
+        
+        <footer>
+            <p>
+                Made with <i class="fa-solid fa-wand-magic-sparkles"></i> for little learners
+            </p>
+        </footer>
+
+    </div>
+
+
+    <!-- 游戏页面 -->
+    <div id="game-screen" class="hidden">
+        
+
+    <!-- 彩虹 -->
+    <div id="rainbow">
+
+        <div class="color red" id="red"></div>
+            
+        <div class="color orange" id="orange"></div>
+
+        <div class="color yellow" id="yellow"></div>
+
+        <div class="color green" id="green"></div>
+
+        <div class="color blue" id="blue"></div>
+
+        <div class="color indigo" id="indigo"></div>
+
+        <div class="color violet" id="violet"></div>
+
+    </div>
+
+
+
+    <!-- 内容 -->
+    <div id="red-content" class="content-section">
+        <div class="content-header">
+            <h2></h2>
+                
+            <button class="read-btn">
+                <i class="fa-solid fa-volume-high"></i>
+                <span class="read-label"></span>
+            </button>
+        </div>
+            
+        <div class="readable-content">
+            <ul class="intro-list"></ul>
+        </div>
+    </div>
+
+
+    <div id="orange-content" class="content-section">
+
+        <h2>Colour Cards</h2>
+            
+        <div class="flashcard-wrapper">
+
+            <button id="prev-btn" class="arrow-btn">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <div class="flashcard">
+
+                <div class="card-image" id="card-image"></div>
+                    
+                <div class="card-text">
+
+                    <h3 id="card-word"></h3>
+                    
+                    <button id="speak-card-btn">
+                        <i class="fa-solid fa-volume-high"></i>
+                    </button>
+
+                </div>
+
+            </div>
+                
+            <button id="next-btn" class="arrow-btn">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    
+    <div id="yellow-content" class="content-section">
+        <h2>Colour Fairy Tale</h2>
+        <p>Story of the colour fairy.</p>
+        <video controls width="500"></video>
+    </div>
+
+
+    <div id="green-content" class="content-section">
+        <h2>Quiz Challenge</h2>
+        <p class="quiz-text">
+            Let’s test your colour knowledge!
+        </p>
+        
+        <a target="_blank"class="quiz-btn">
+            
+            <i class="fa-solid fa-trophy"></i>
+            
+            <span class="quiz-btn-text">
+                Play Now
+            </span>
+        
+        </a>
+    
+    </div>
+
+            
+    <div id="blue-content" class="content-section">
+        <div class="mix-area">
+            <h2>🎨 Magic Colour Lab</h2>
+
+            <p class="magic-text">
+                Pick two colours to mix and see the magic happen!
+            </p>
+
+            <div class="tube">
+                <div class="liquid" id="liquid"></div>
+            </div>
+    
+            <div class="mix-buttons">
+        
+                <button class="mix-btn" data-colour="red">
+                    🔴
+                </button>
+
+                <button class="mix-btn" data-colour="yellow">
+                    🟡
+                </button>
+
+                <button class="mix-btn" data-colour="blue">
+                    🔵
+                </button>
+            
+            </div>
+
+            <div id="selected-colours"></div>
+
+            <div id="mix-result">
+            ✨ <i class="fa-solid fa-wand-sparkles"></i> ✨
+            </div>
+            
+        </div>
+    </div>
+
+
+    <div id="indigo-content" class="content-section">
+        <h2>
+            <i class="fa-solid fa-gamepad"></i>
+            Rainbow Game Levels
+        </h2>
+        
+        <p>
+            Complete the level to unlock the next challenge!
+        </p>
+        
+        <!-- LEVEL 1 -->
+         
+        <button class="level-btn unlocked-level"
+        id="level1-btn">
+            
+            <i class="fa-solid fa-star"></i>
+            
+            <span class="level1-text">
+                Level 1
+            </span>
+        
+        </button>
+        
+        <!-- LEVEL 2 -->
+        <button class="level-btn locked-level"
+        id="level2-btn">
+        
+            <i class="fa-solid fa-lock level2-icon"></i>
+
+            <span class="level2-text">
+                Level 2
+            </span>
+
+        </button>
+
+        <!--LEVEL 3-->
+        <button class="level-btn locked-level"
+        id="level3-btn">
+        
+            <i class="fa-solid fa-lock level3-icon"></i>
+
+            <span class="level3-text">
+                Level 3
+            </span>
+
+        </button>
+        
+        <!-- FINAL LEVEL -->
+        <button class="level-btn locked-level"
+        id="level4-btn">
+
+            <i class="fa-solid fa-lock final-icon"></i>
+
+            <span class="final-text">
+                Final Challenge
+            </span>
+
+        </button>
+
+    </div>
+
+
+    <div id="violet-content" class="content-section">
+
+        <h2 class="violet-title"></h2>
+        
+        <p class="ending-text"></p>
+        
+        <div class="appreciation-card">
+
+            <p class="appreciation-1"></p>
+
+            <p class="appreciation-2"></p>
+
+            <p class="appreciation-3"></p>
+            
+            <div class="ai-tools">
+                <span>✨ Dola AI</span>
+                <span>🎬 Morph Studio</span>
+                <span>🎥 Runway</span>
+                <span>🎨 Canva</span>
+                <span>✂️ CapCut</span>
+                <span>🤖 ChatGPT</span>
+            </div>
+
+            <h3 class="teacher-title"></h3>
+            
+            <ul class="teacher-list">
+                <li>Kelly Tan</li>
+                <li>Ng Lee Lee</li>
+                <li>How Sin Yan</li>
+            </ul>
+
+            <p class="thank-you"></p>
+
+        </div>
+
+    </div>
+
+
+
+    <footer>
+        <p>
+            Made with <i class="fa-solid fa-wand-magic-sparkles"></i> for little learners
+        </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>
